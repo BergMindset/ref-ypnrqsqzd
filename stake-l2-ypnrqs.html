@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Стейк-лист Гуру</title>
+</head>
+<body>
+
+<style>
+  :root{
+    --bg:#f6f7fb; --surface:#ffffff; --surface-2:#eef1f7; --line:#dfe3ec; --line-soft:#eaedf4;
+    --ink:#161a26; --ink-2:#4a5268; --ink-3:#727a8f;
+    --accent:#4f46e5; --accent-soft:#eeecfd;
+    --good:#15803d; --good-bg:#e4f4ea; --good-line:#bfe3cb;
+    --warn:#b45309; --warn-bg:#fbefdd; --warn-line:#efd8ae;
+    --bad:#c02626; --bad-bg:#fae7e7; --bad-line:#f0c7c7;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --maxw:1000px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0d0f16; --surface:#151925; --surface-2:#1b2030; --line:#28303f; --line-soft:#222a38;
+      --ink:#e8ecf5; --ink-2:#a2acc2; --ink-3:#7a8299;
+      --accent:#8b83ff; --accent-soft:#211f3d;
+      --good:#4ade80; --good-bg:#12251a; --good-line:#1f4530;
+      --warn:#fbbf47; --warn-bg:#2a2110; --warn-line:#4a3a16;
+      --bad:#f87171; --bad-bg:#2a1414; --bad-line:#50221f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0d0f16; --surface:#151925; --surface-2:#1b2030; --line:#28303f; --line-soft:#222a38;
+    --ink:#e8ecf5; --ink-2:#a2acc2; --ink-3:#7a8299;
+    --accent:#8b83ff; --accent-soft:#211f3d;
+    --good:#4ade80; --good-bg:#12251a; --good-line:#1f4530;
+    --warn:#fbbf47; --warn-bg:#2a2110; --warn-line:#4a3a16;
+    --bad:#f87171; --bad-bg:#2a1414; --bad-line:#50221f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:44px 22px 90px}
+  h1,h2,h3{text-wrap:balance;margin:0}
+  .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-size:clamp(28px,5vw,40px);font-weight:800;letter-spacing:-.02em;margin:12px 0 0;line-height:1.1}
+  .lede{font-size:18px;color:var(--ink-2);margin:14px 0 0;max-width:66ch}
+  .lede b{color:var(--ink)}
+  h2{font-size:21px;font-weight:750;letter-spacing:-.01em;margin:0}
+  .sec-note{color:var(--ink-3);font-size:14px;margin:5px 0 0;max-width:80ch}
+  section{margin-top:46px}
+  .sec-head{display:flex;flex-direction:column;gap:2px;padding-bottom:13px;border-bottom:2px solid var(--line);margin-bottom:18px}
+  .sec-head .k{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .count{font-family:var(--mono);font-size:13px;color:var(--ink-3);font-weight:600}
+
+  .headline{margin-top:24px;background:var(--accent-soft);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+  .headline .big{font-family:var(--mono);font-size:30px;font-weight:800;color:var(--accent);letter-spacing:-.02em;line-height:1}
+  .headline .lbl{font-size:14px;color:var(--ink-2);max-width:52ch}
+  .headline .lbl b{color:var(--ink)}
+
+  .tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+  table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+  thead th{text-align:left;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;
+    color:var(--ink-3);font-weight:700;padding:12px 15px;background:var(--surface-2);
+    border-bottom:1px solid var(--line);white-space:nowrap}
+  tbody td{padding:12px 15px;border-bottom:1px solid var(--line-soft);vertical-align:middle}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover td{background:var(--surface-2)}
+  .pair{font-family:var(--mono);font-weight:700;font-size:14px;color:var(--ink);white-space:nowrap}
+  .pair small{display:block;font-family:var(--sans);font-weight:500;font-size:12px;color:var(--ink-3);margin-top:2px}
+  .ids{font-family:var(--mono);font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.7}
+  .venue{font-size:13.5px;color:var(--ink-2)}
+  .num{font-variant-numeric:tabular-nums}
+
+  .chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;
+    padding:3px 9px;border-radius:999px;white-space:nowrap;border:1px solid}
+  .chip::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+  .c-go{color:var(--good);background:var(--good-bg);border-color:var(--good-line)}
+  .c-opt{color:var(--warn);background:var(--warn-bg);border-color:var(--warn-line)}
+  .c-no{color:var(--ink-3);background:var(--surface-2);border-color:var(--line)}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:15px 16px 17px}
+  .step .n{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.05em}
+  .step .t{margin-top:8px;font-size:14.5px;font-weight:600;line-height:1.4}
+  .step .d{margin-top:6px;font-size:13px;color:var(--ink-3);line-height:1.45}
+
+  .apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+  .app{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 16px}
+  .app h3{font-size:15px;font-weight:750}
+  .app .u{font-family:var(--mono);font-size:12.5px;color:var(--accent);margin-top:3px}
+  .app p{margin:9px 0 0;font-size:13px;color:var(--ink-2);line-height:1.5}
+
+  .rules{display:grid;gap:11px}
+  .rule{display:flex;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 17px}
+  .rule .m{font-size:18px;line-height:1.3}
+  .rule p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.55}
+  .rule b{color:var(--ink);font-weight:700}
+  .rule .pair{font-size:13px}
+
+  footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink-3);
+    font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  @media (max-width:660px){.steps{grid-template-columns:1fr}.wrap{padding:32px 15px 70px}}
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гуру · L2 · для основателя</div>
+    <h1>Что застейкать — и где стейкать нечего</h1>
+    <p class="lede">Позиции лежат на твоём кошельке <span class="pair" style="font-size:15px">0x37BB…7849</span>, поэтому стейкает их только твоя подпись — я подписать за тебя не могу. Заходишь в приложение, подключаешь этот кошелёк, жмёшь <b>Stake</b>. Кнопка появляется только там, где у пула есть живой гейдж — ниже ровно эти места.</p>
+    <div class="headline">
+      <div class="big">8</div>
+      <div class="lbl"><b>инвестиционных позиций на Base — вот здесь настоящие деньги (~$4000) и настоящая награда AERO.</b> Пока они без стейка, капает только базовая комиссия, а эмиссия идёт мимо. Это единственное обязательное действие.</div>
+    </div>
+  </header>
+
+  <!-- PRIORITY -->
+  <section>
+    <div class="sec-head"><div class="k"><h2>Обязательно — деньги</h2><span class="count">8 позиций · Base · aerodrome.finance</span></div>
+      <p class="sec-note">Все три пула имеют живой гейдж (проверено on-chain). Стейкаешь все восемь — по каждой позиции в приложении будет кнопка Stake.</p></div>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Пул</th><th>tokenId позиций</th><th>Гейдж</th></tr></thead>
+      <tbody>
+        <tr><td class="pair">WETH / cbBTC<small>4 позиции · коридоры ±10 / ±20%</small></td><td class="ids">4077140 · 4077250<br>4080434 · 4080439</td><td><span class="chip c-go">жив · AERO</span></td></tr>
+        <tr><td class="pair">cbBTC / USDC<small>2 позиции · ±10 / ±20%</small></td><td class="ids">4078465 · 4078478</td><td><span class="chip c-go">жив · AERO</span></td></tr>
+        <tr><td class="pair">WETH / USDC<small>2 позиции · ±10 / ±20%</small></td><td class="ids">4080443 · 4080449</td><td><span class="chip c-go">жив · AERO</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- HOW -->
+  <section>
+    <div class="sec-head"><div class="k"><h2>Как застейкать</h2><span class="count">3 шага · в приложении</span></div></div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><div class="t">Открой aerodrome.finance</div><div class="d">Раздел Portfolio / Positions. Подключи кошелёк 0x37BB…7849.</div></div>
+      <div class="step"><div class="n">02</div><div class="t">У каждой позиции жми Stake</div><div class="d">Подтверди транзакцию. Позиция уходит в гейдж, начинает капать AERO.</div></div>
+      <div class="step"><div class="n">03</div><div class="t">Награду забирай кнопкой Claim</div><div class="d">Там же, когда захочешь. Вывести из стейка — Unstake, деньги никогда не заперты.</div></div>
+    </div>
+  </section>
+
+  <!-- OPTIONAL -->
+  <section>
+    <div class="sec-head"><div class="k"><h2>Можно, но не обязательно — маячки</h2><span class="count">копейки эмиссии</span></div>
+      <p class="sec-note">Маячки по $5–30 — они для широты аудита, не для дохода. Стейк даёт центы, ручной работы много. Если хочешь полноты — вот где у них есть живой гейдж; в приложении просто появится Stake.</p></div>
+    <div class="apps">
+      <div class="app"><h3>Optimism · Velodrome</h3><div class="u">velodrome.finance</div><p><span class="chip c-opt">5 стейкается</span> USDC/USDT, USDC/WETH ×2, WETH/WBTC, wstETH/WETH. Позиция WETH/OP — гейдж мёртв, пропусти.</p></div>
+      <div class="app"><h3>Base · Aerodrome</h3><div class="u">aerodrome.finance</div><p><span class="chip c-opt">AERO-пары</span> Маячки с AERO (WETH/AERO, AERO/cbBTC) имеют гейдж. Стейбл- и WETH/USDC-маячки — по наличию кнопки в приложении.</p></div>
+    </div>
+  </section>
+
+  <!-- NOTHING -->
+  <section>
+    <div class="sec-head"><div class="k"><h2>Стейкать нечего — так и должно быть</h2><span class="count">без эмиссии</span></div>
+      <p class="sec-note">Uniswap эмиссию не платит вообще — эти позиции зарабатывают только комиссии, кнопки Stake там нет и не будет. Это не упущение, а устройство площадки.</p></div>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Сеть · площадка</th><th>Позиций</th><th>Статус</th></tr></thead>
+      <tbody>
+        <tr><td class="venue">Arbitrum · Uniswap V3</td><td class="num">8 маячков</td><td><span class="chip c-no">только комиссии</span></td></tr>
+        <tr><td class="venue">Polygon · Uniswap V3</td><td class="num">8 маячков</td><td><span class="chip c-no">только комиссии</span></td></tr>
+        <tr><td class="venue">Ethereum · Uniswap V3</td><td class="num">2 инвест. (WETH/USDT)</td><td><span class="chip c-no">только комиссии</span></td></tr>
+        <tr><td class="venue">BSC · PancakeSwap V3</td><td class="num">7 маячков</td><td><span class="chip c-opt">фермы CAKE — проверь в app</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- RULES -->
+  <section>
+    <div class="sec-head"><div class="k"><h2>Помни</h2></div></div>
+    <div class="rules">
+      <div class="rule"><span class="m">🔑</span><p><b>Стейкаешь только ты.</b> Позиции на твоём кошельке — Гуру своим ключом их не тронет. Это защита, а не ограничение.</p></div>
+      <div class="rule"><span class="m">💧</span><p><b>Выход всегда открыт.</b> Unstake доступен в любой момент, стейк деньги не запирает. Забрать награду — Claim, не обязательно снимать позицию.</p></div>
+      <div class="rule"><span class="m">📉</span><p><b>Коридор важнее стейка.</b> Когда цена выйдет из коридора ±10/±20%, позиция перестанет зарабатывать до ребаланса — я сигналю, ты решаешь. Стейк это не отменяет.</p></div>
+      <div class="rule"><span class="m">⚙️</span><p><b>Автостейк — это фаза 3.</b> Чтобы Гуру стейкал сам без риска одного ключа, позиции должны жить на Safe с Гуру как ограниченным модулем. Поднимаю в фоне; пока — вручную эти восемь.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Гуру · стейк-лист L2 · позиции на 0x37BB…7849 · проверено on-chain 14.08.2026</span>
+    <span>Powered by YLDX.ai</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
