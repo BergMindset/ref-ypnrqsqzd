@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Cat1 · Стейбл-индекс</title>
+<style>
+  :root{
+    --bg:#f6f7fb; --surface:#ffffff; --surface-2:#eef1f7; --line:#dfe3ec; --line-soft:#eaedf4;
+    --ink:#161a26; --ink-2:#4a5268; --ink-3:#727a8f;
+    --accent:#4f46e5; --accent-soft:#eeecfd;
+    --good:#15803d; --good-bg:#e4f4ea; --good-line:#bfe3cb;
+    --warn:#b45309; --warn-bg:#fbefdd; --warn-line:#efd8ae;
+    --bad:#c02626; --bad-bg:#fae7e7; --bad-line:#f0c7c7;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --maxw:1000px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0d0f16; --surface:#151925; --surface-2:#1b2030; --line:#28303f; --line-soft:#222a38;
+      --ink:#e8ecf5; --ink-2:#a2acc2; --ink-3:#7a8299;
+      --accent:#8b83ff; --accent-soft:#211f3d;
+      --good:#4ade80; --good-bg:#12251a; --good-line:#1f4530;
+      --warn:#fbbf47; --warn-bg:#2a2110; --warn-line:#4a3a16;
+      --bad:#f87171; --bad-bg:#2a1414; --bad-line:#50221f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0d0f16; --surface:#151925; --surface-2:#1b2030; --line:#28303f; --line-soft:#222a38;
+    --ink:#e8ecf5; --ink-2:#a2acc2; --ink-3:#7a8299;
+    --accent:#8b83ff; --accent-soft:#211f3d;
+    --good:#4ade80; --good-bg:#12251a; --good-line:#1f4530;
+    --warn:#fbbf47; --warn-bg:#2a2110; --warn-line:#4a3a16;
+    --bad:#f87171; --bad-bg:#2a1414; --bad-line:#50221f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:48px 22px 90px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  h1,h2,h3{text-wrap:balance;margin:0}
+  .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-size:clamp(30px,5vw,44px);font-weight:800;letter-spacing:-.02em;margin:12px 0 0;line-height:1.08}
+  .lede{font-size:19px;color:var(--ink-2);margin:16px 0 0;max-width:64ch}
+  h2{font-size:22px;font-weight:750;letter-spacing:-.01em;margin:0}
+  .sec-note{color:var(--ink-3);font-size:14px;margin:6px 0 0;max-width:78ch}
+  section{margin-top:52px}
+  .sec-head{display:flex;flex-direction:column;gap:2px;padding-bottom:14px;border-bottom:2px solid var(--line);margin-bottom:20px}
+  .sec-head .k{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .count{font-family:var(--mono);font-size:13px;color:var(--ink-3);font-weight:600}
+
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:15px 15px 17px;position:relative;overflow:hidden}
+  .step .n{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.05em}
+  .step .t{margin-top:8px;font-size:14.5px;font-weight:600;line-height:1.35}
+  .lev{margin-top:16px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;
+    background:var(--accent-soft);border:1px solid var(--line);border-radius:13px;padding:14px 18px}
+  .lev b{font-family:var(--mono);font-size:20px;color:var(--accent);font-weight:800;letter-spacing:-.02em}
+  .lev .lbl{font-size:13px;color:var(--ink-2)}
+
+  .tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+  table{border-collapse:collapse;width:100%;min-width:720px;font-size:14px}
+  thead th{text-align:left;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;
+    color:var(--ink-3);font-weight:700;padding:13px 15px;background:var(--surface-2);
+    border-bottom:1px solid var(--line);white-space:nowrap}
+  tbody td{padding:13px 15px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover td{background:var(--surface-2)}
+  .tkr{font-family:var(--mono);font-weight:700;font-size:14px;color:var(--ink);white-space:nowrap}
+  .tkr small{display:block;font-family:var(--sans);font-weight:500;font-size:12px;color:var(--ink-3);margin-top:2px}
+  .venue{font-size:13px;color:var(--ink-2)}
+  .chains{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);letter-spacing:.01em}
+  .angle{font-size:13px;color:var(--ink-2);line-height:1.5;min-width:210px}
+
+  .chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;
+    padding:3px 9px;border-radius:999px;white-space:nowrap;letter-spacing:.01em;border:1px solid}
+  .chip::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+  .r-low{color:var(--good);background:var(--good-bg);border-color:var(--good-line)}
+  .r-mid{color:var(--warn);background:var(--warn-bg);border-color:var(--warn-line)}
+  .r-high{color:var(--bad);background:var(--bad-bg);border-color:var(--bad-line)}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:8px;border:1px solid}
+  .b-dead{color:var(--bad);background:var(--bad-bg);border-color:var(--bad-line)}
+
+  .danger{border:1px solid var(--bad-line);background:var(--bad-bg);border-radius:16px;padding:22px 22px 8px}
+  .danger .sec-head{border-bottom-color:var(--bad-line)}
+  .dead-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;padding-bottom:16px}
+  .dead{background:var(--surface);border:1px solid var(--bad-line);border-radius:12px;padding:13px 15px}
+  .dead .tkr{color:var(--bad)}
+  .dead p{margin:6px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.45}
+
+  .rules{display:grid;gap:11px;counter-reset:r}
+  .rule{display:flex;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 17px}
+  .rule::before{counter-increment:r;content:counter(r);font-family:var(--mono);font-weight:700;
+    color:var(--accent);font-size:13px;min-width:22px;padding-top:1px}
+  .rule p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.55}
+  .rule b{color:var(--ink);font-weight:700}
+  .rule .tkr{font-size:13px}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--ink-3);font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media (max-width:720px){
+    .steps{grid-template-columns:repeat(2,1fr)}
+    .wrap{padding:34px 16px 70px}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Cat1 · Стейбл-индекс · для оператора</div>
+    <h1>Кредитные стейблы: что занимаем, где и с каким риском</h1>
+    <p class="lede">Стратегия стейбл-пула — не просто ликвидность. Мы кладём в залог надёжный доллар (USDC / USDT), занимаем «рисковый» стейбл, продаём его и лупим. По сути держим корзину алго-стейблов <b>в шорте</b> и параллельно снимаем yield. Отсюда — «дельта-нейтраль».</p>
+  </header>
+
+  <section>
+    <div class="sec-head"><div class="k"><h2>Как собирается позиция</h2><span class="count">looping · 5 шагов</span></div>
+      <p class="sec-note">Ищем свежие кредитные протоколы (lending / borrowing), в т.ч. изолированные рынки — там выше ставки и стимулы.</p></div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><div class="t">Кладём в залог USDC / USDT</div></div>
+      <div class="step"><div class="n">02</div><div class="t">Занимаем алго-стейбл (базовый, не стейкнутый)</div></div>
+      <div class="step"><div class="n">03</div><div class="t">Обмениваем его на USDC</div></div>
+      <div class="step"><div class="n">04</div><div class="t">Снова кладём в залог</div></div>
+      <div class="step"><div class="n">05</div><div class="t">Повторяем — это и есть лупинг</div></div>
+    </div>
+    <div class="lev">
+      <div><b>≈4.9×</b> <span class="lbl">макс. плечо (LTV ~80% с запасом, залог и долг — стейблы)</span></div>
+      <div><b>30 %+</b> <span class="lbl">годовых при стимулах протокола</span></div>
+      <div><b>~300 %</b> <span class="lbl">лучший сценарий: yield + депег вниз на плече</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div class="k"><h2>Реально занимается сейчас</h2><span class="count">10 имён · проверено</span></div>
+      <p class="sec-note">Это те, что действительно листингованы к займу на живом рынке (mid-2026). Ставки и капы двигаются постоянно — перед входом проверяй утилизацию и кап на самой площадке.</p></div>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Стейбл</th><th>Тип</th><th>Где занять</th><th>Сети</th><th>Депег-риск</th><th>Угол стратегии</th></tr></thead>
+      <tbody>
+        <tr><td class="tkr">USDe<small>Ethena</small></td><td class="venue">синт. доллар</td><td class="venue">Aave v3 · Morpho · Fluid · Kamino</td><td class="chains">ETH·Base·Arb·SOL</td><td><span class="chip r-mid">средний</span></td><td class="angle">Крупнейший синт-доллар с реальной глубиной займа. Шорт = funding-flip / стресс пега.</td></tr>
+        <tr><td class="tkr">USDf<small>Falcon</small></td><td class="venue">синт. доллар</td><td class="venue">Morpho · Euler Frontier</td><td class="chains">ETH·BNB</td><td><span class="chip r-mid">средне-выс.</span></td><td class="angle">CeDeFi-непрозрачность = живой идиосинкратический риск. Занимаем базовый USDf, не sUSDf.</td></tr>
+        <tr><td class="tkr">lvlUSD<small>Level</small></td><td class="venue">синт. доллар</td><td class="venue">Morpho · часть Euler</td><td class="chains">ETH</td><td><span class="chip r-mid">средний</span></td><td class="angle">Риск = контагион тех же площадок (Aave/Morpho), где его и шортишь. Малый вес в корзине.</td></tr>
+        <tr><td class="tkr">frxUSD<small>Frax (ex-FRAX)</small></td><td class="venue">гибрид-алго</td><td class="venue">Fraxlend · Aave v4 · Euler · Morpho</td><td class="chains">ETH·Fraxtal·Arb·Base</td><td><span class="chip r-low">низко-средн.</span></td><td class="angle">Самые глубокие рынки займа среди гибридов. Чистый шорт или дешёвая нога фондирования.</td></tr>
+        <tr><td class="tkr">GHO<small>Aave</small></td><td class="venue">CDP</td><td class="venue">Aave v3 (ETH·Arb·Base)</td><td class="chains">ETH·Arb·Base</td><td><span class="chip r-low">низко-средн.</span></td><td class="angle">Самый чистый: занять напрямую под залог по известной ставке, предсказуемые ликвидации.</td></tr>
+        <tr><td class="tkr">crvUSD<small>Curve</small></td><td class="venue">CDP</td><td class="venue">LlamaLend · часть Morpho/Euler</td><td class="chains">ETH</td><td><span class="chip r-low">низко-средн.</span></td><td class="angle">Глубокий, soft-liquidation делает залоговую ногу безопаснее большинства CDP.</td></tr>
+        <tr><td class="tkr">rUSD<small>Reservoir</small></td><td class="venue">гибрид</td><td class="venue">Morpho (Steakhouse) · свои рынки</td><td class="chains">ETH</td><td><span class="chip r-mid">средний</span></td><td class="angle">rUSD прямо loan-asset. Следи за утилизацией: &gt;90% — ставка займа выше yield, карри в минус.</td></tr>
+        <tr><td class="tkr">DOLA<small>Inverse</small></td><td class="venue">CDP</td><td class="venue">FiRM (фикс. ставка)</td><td class="chains">ETH</td><td><span class="chip r-mid">средний</span></td><td class="angle">Фикс. ставка = предсказуемая цена шорта, без срока. Ликвидность скромная.</td></tr>
+        <tr><td class="tkr">USDa<small>Avalon</small></td><td class="venue">CDP (BTC)</td><td class="venue">USDaLend (8% фикс.) · часть Morpho</td><td class="chains">ETH·BNB·BTC-L2</td><td><span class="chip r-mid">средне-выс.</span></td><td class="angle">Фикс. ставка, но кастодиальный CeDeFi-риск + волатильность BTC-залога. Размер аккуратно.</td></tr>
+        <tr><td class="tkr">USDS<small>Sky (ex-DAI)</small></td><td class="venue">CDP</td><td class="venue">Spark · Aave · Morpho · Fluid · Compound</td><td class="chains">ETH·Base·Arb</td><td><span class="chip r-low">низкий</span></td><td class="angle">НЕ шорт (пег крепкий). Идеальная дешёвая нога фондирования — занять у savings-ставки.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div class="k"><h2>Синтетические доходные доллары</h2><span class="count">ядро дельта-нейтрали</span></div>
+      <p class="sec-note">Занимаем всегда БАЗОВЫЙ токен (USDe, USDf, lvlUSD). Стейкнутые обёртки (sUSDe, sUSDf, slvlUSD, sfrxUSD, srUSD) — только залог: они растут по дизайну, занять их = отрицательный карри и рост долга.</p></div>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Обёртка</th><th>Роль</th><th>Почему</th></tr></thead>
+      <tbody>
+        <tr><td class="tkr">sUSDe · sUSDf · slvlUSD · sfrxUSD · srUSD</td><td><span class="chip r-mid">только залог</span></td><td class="angle">Курс обёртки только растёт (капает funding/yield). Кладём в залог и занимаем под них дешёвый стейбл — но сами не занимаем.</td></tr>
+        <tr><td class="tkr">USDtb<small>Ethena, T-bills</small></td><td><span class="chip r-low">залог / нога</span></td><td class="angle">Занимается на Aave, но депег-апсайд низкий (T-bill бэкинг). Держим как надёжный доллар в паре, не шортим.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div class="k"><h2>RWA / T-bill доллары</h2><span class="count">осторожно — часто НЕ $1</span></div>
+      <p class="sec-note">Обеспечены гособлигациями: безопасны, депег-апсайда мало, чаще нужны как залог, а не как долг. Внимание: многие «растут» и не привязаны к $1 — модель «депег до $0.90» к ним НЕ применима.</p></div>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Стейбл</th><th>Заметка</th><th>Риск</th><th>Как использовать</th></tr></thead>
+      <tbody>
+        <tr><td class="tkr">USD0 / USD0++<small>Usual</small></td><td class="angle">USD0 ~$1 (Morpho). USD0++ — 4-летняя облигация с полом $0.87, НЕ доллар (взорвалась янв-2025).</td><td><span class="chip r-mid">USD0++ выс.</span></td><td class="angle">USD0 — мелкий диверсификатор; USD0++ — ставка на дюрацию, не «$1-шорт».</td></tr>
+        <tr><td class="tkr">USDz<small>Anzen, частный кредит</small></td><td class="angle">Бэкинг — неликвидный офчейн-портфель; реальный риск переоценки под стрессом.</td><td><span class="chip r-mid">средне-выс.</span></td><td class="angle">Кандидат в шорт, но глубина займа тонкая — малый вес, проверяй рынок.</td></tr>
+        <tr><td class="tkr">USDY · USDM · cUSDO</td><td class="angle">Растущие T-bill токены (цена &gt;$1), часто с KYC/ограничением трансфера.</td><td><span class="chip r-low">низкий</span></td><td class="angle">Залог / yield-нога, не занимаемый рисковый стейбл.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="danger">
+    <div class="sec-head"><div class="k"><h2 style="color:var(--bad)">⛔ Не трогать — мёртвые / замороженные</h2><span class="count">каскад ноя-2025 + эксплойты 2026</span></div>
+      <p class="sec-note">Рынки заморожены на ~100% утилизации, оракулы захардкожены на $1, или протокол свёрнут. Если оператор «зайдёт в шорт» здесь — не сможет выйти. Держим список, чтобы НЕ спутать с живыми.</p></div>
+    <div class="dead-grid">
+      <div class="dead"><span class="tkr">xUSD <span class="badge b-dead">мёртв</span></span><p>Stream Finance. Эпицентр каскада ноя-2025, обвал до ~$0.07. Рынки заморожены.</p></div>
+      <div class="dead"><span class="tkr">deUSD / sdeUSD <span class="badge b-dead">мёртв</span></span><p>Elixir. Рекурсивный бэкинг через xUSD, −98% (~$0.02). Минт/редем отключены.</p></div>
+      <div class="dead"><span class="tkr">USDX <span class="badge b-dead">заморожен</span></span><p>Stables Labs. Депег ниже $0.60 (ноя-2025), ставки ~88%, лендеры не вышли. ~$680M стёрто.</p></div>
+      <div class="dead"><span class="tkr">USR <span class="badge b-dead">на паузе</span></span><p>Resolv. KMS-эксплойт март-2026 наминтил ~$80M, падал до ~$0.025. Fluid принял &gt;$10M плохого долга.</p></div>
+      <div class="dead"><span class="tkr">MIM <span class="badge b-dead">поломан</span></span><p>Abracadabra. Депег до ~$0.49 (июнь-2026) + эксплойты, тонкая ликвидность.</p></div>
+      <div class="dead"><span class="tkr">mkUSD / USDN / BEAN <span class="badge b-dead">defunct</span></span><p>Prisma (эксплойт-2024), Neutrino (мёртв с 2022), Beanstalk. Только исторический пример.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div class="k"><h2>Железные правила (чтобы не сжечь депозит)</h2><span class="count">честно · про деньги</span></div></div>
+    <div class="rules">
+      <div class="rule"><p><b>Наивный «шорт» стейбла теряет деньги, если он ре-пегнётся к $1.</b> Заработок — не из самого шорта, а из yield + выигрыша, если стейбл депегается ВНИЗ. Уже упавшие (USR, MIM, USD0++) — это ставка «дальше вниз против восстановления», риск в обе стороны.</p></div>
+      <div class="rule"><p><b>Ловушка изолированного рынка.</b> Когда непрозрачные синтетики ломались (ноя-2025), их рынки уходили в 100% утилизации, ставки ~88%, оракул захардкожен на $1 — выйти нельзя. Шорт может запереть тебя именно когда он «в плюсе». Бери ликвидные, не-изолированные рынки, дроби на много мелких шортов.</p></div>
+      <div class="rule"><p><b>Стейкнутые обёртки НЕ занимаем.</b> <span class="tkr">sUSDe, sUSDf, sfrxUSD, srUSD, slvlUSD</span> — только supply/залог. Они растут → занять их = долг растёт и тебя ликвидируют. Всегда целься в базовый токен.</p></div>
+      <div class="rule"><p><b>Занять доходный стейбл — значит платить его yield как стоимость карри.</b> На высокой утилизации (напр. rUSD &gt;90%) ставка займа прыгает ВЫШЕ доходности токена — карри уходит в минус. Тезис шорта должен быть депег-риск, а не карри.</p></div>
+      <div class="rule"><p><b>Растущие токены — не $1.</b> <span class="tkr">USDY, cUSDO, USD0++</span> и стейкнутые обёртки имеют растущую цену погашения. «Депег до $0.90» к ним не применяется — моделировать их как $1-шорт неверно. USD0++ — это дисконтная 4-летняя облигация с полом $0.87.</p></div>
+      <div class="rule"><p><b>«Чистые» шорты часто = минт против СВОЕГО залога.</b> <span class="tkr">GHO, crvUSD, DOLA, USDa</span> шортятся, занимая под собственный залог — значит твой риск включает ликвидацию залога. А <span class="tkr">USDS/DAI</span> почти не депегается — это дешёвая нога фондирования, а не цель шорта.</p></div>
+      <div class="rule"><p><b>Тонкая / минт-only глубина — проверяй ончейн.</b> <span class="tkr">avUSD, YUSD, USDz, USDM, cUSD, GYD, alUSD, fxUSD, eUSD</span> часто «шортятся» только минтом против своего залога, а не займом у третьих. Размер — маленький, рынок — проверить вживую.</p></div>
+      <div class="rule"><p><b>Плечо усиливает и прибыль, и убыток.</b> До ~4.9× приятно на бумаге, но депег ВВЕРХ или скачок ставки на плече бьёт кратно. Держим запас до ликвидации и мониторим ставку займа против доходности залога.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Cat1 · шпаргалка стейбл-индекса · данные mid-2026 (проверять капы/утилизацию вживую)</span>
+    <span>Powered by YLDX.ai</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
