@@ -1,5 +1,5 @@
 {
- "asOf": "2026-08-15 04:30 UTC",
+ "asOf": "2026-08-15 05:05 UTC",
  "total": 50,
  "filteredFromMarket": 502,
  "methodology": "fee APY (apyBase), real DEX only, turnover>=3% TVL, fee-share>=30%",
