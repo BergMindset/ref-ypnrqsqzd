@@ -1,26 +1,26 @@
 {
- "asOf": "2026-08-15T03:53:18.501Z",
+ "asOf": "2026-08-15T05:15:01.332Z",
  "note": "Current queue priorities (top-3 per basket). Ranked by fee APY + live turnover, not by displayed APY. Not investment advice.",
  "stable": [
   {
    "pair": "EURC-USDC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "23.7%",
-   "turnover": "1.81x",
+   "feeApy": "23.3%",
+   "turnover": "1.78x",
    "tvl": "2.1M"
   },
   {
    "pair": "EURC-USDC",
    "venue": "uniswap-v4 · Ethereum",
-   "feeApy": "16.5%",
-   "turnover": "1.51x",
+   "feeApy": "16.7%",
+   "turnover": "1.53x",
    "tvl": "0.8M"
   },
   {
    "pair": "USDC-USDT",
    "venue": "uniswap-v3 · Arbitrum",
-   "feeApy": "15.9%",
-   "turnover": "4.35x",
+   "feeApy": "16.4%",
+   "turnover": "4.48x",
    "tvl": "1.4M"
   }
  ],
@@ -28,46 +28,46 @@
   {
    "pair": "USDC-CBBTC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "116.1%",
-   "turnover": "0.40x",
+   "feeApy": "113.1%",
+   "turnover": "0.39x",
    "tvl": "5.5M"
   },
   {
    "pair": "WETH-USDC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "78.9%",
-   "turnover": "9.28x",
-   "tvl": "6.0M"
+   "feeApy": "59.5%",
+   "turnover": "6.12x",
+   "tvl": "7.7M"
   },
   {
    "pair": "WETH-CBBTC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "51.2%",
-   "turnover": "11.22x",
-   "tvl": "8.3M"
+   "feeApy": "50.8%",
+   "turnover": "7.95x",
+   "tvl": "8.2M"
   }
  ],
  "dex": [
   {
-   "pair": "AERO-CBBTC",
-   "venue": "aerodrome-slipstream · Base",
-   "feeApy": "50.2%",
-   "turnover": "0.46x",
-   "tvl": "0.3M"
-  },
-  {
    "pair": "WETH-AERO",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "47.4%",
-   "turnover": "0.64x",
-   "tvl": "2.1M"
+   "feeApy": "81.9%",
+   "turnover": "1.09x",
+   "tvl": "1.3M"
   },
   {
    "pair": "AERO-CBBTC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "42.5%",
-   "turnover": "1.09x",
+   "feeApy": "43.7%",
+   "turnover": "1.14x",
    "tvl": "1.1M"
+  },
+  {
+   "pair": "1INCH-UNI",
+   "venue": "uniswap-v4 · Ethereum",
+   "feeApy": "36.5%",
+   "turnover": "0.10x",
+   "tvl": "1.2M"
   }
  ]
 }
