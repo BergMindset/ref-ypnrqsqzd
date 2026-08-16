@@ -1,72 +1,72 @@
 {
- "asOf": "2026-08-15T05:15:01.332Z",
+ "asOf": "2026-08-16T05:15:02.193Z",
  "note": "Current queue priorities (top-3 per basket). Ranked by fee APY + live turnover, not by displayed APY. Not investment advice.",
  "stable": [
   {
-   "pair": "EURC-USDC",
-   "venue": "aerodrome-slipstream · Base",
-   "feeApy": "23.3%",
-   "turnover": "1.78x",
-   "tvl": "2.1M"
-  },
-  {
-   "pair": "EURC-USDC",
+   "pair": "APXUSD-USDC",
    "venue": "uniswap-v4 · Ethereum",
-   "feeApy": "16.7%",
-   "turnover": "1.53x",
-   "tvl": "0.8M"
+   "feeApy": "663.8%",
+   "turnover": "0.91x",
+   "tvl": "0.6M"
   },
   {
    "pair": "USDC-USDT",
    "venue": "uniswap-v3 · Arbitrum",
-   "feeApy": "16.4%",
-   "turnover": "4.48x",
+   "feeApy": "19.5%",
+   "turnover": "5.34x",
    "tvl": "1.4M"
+  },
+  {
+   "pair": "EURC-USDC",
+   "venue": "uniswap-v4 · Ethereum",
+   "feeApy": "13.1%",
+   "turnover": "1.20x",
+   "tvl": "0.8M"
   }
  ],
  "coin": [
   {
-   "pair": "USDC-CBBTC",
-   "venue": "aerodrome-slipstream · Base",
-   "feeApy": "113.1%",
-   "turnover": "0.39x",
-   "tvl": "5.5M"
+   "pair": "WSOL-USDC",
+   "venue": "raydium-amm · Solana",
+   "feeApy": "25.6%",
+   "turnover": "0.28x",
+   "tvl": "10.4M"
+  },
+  {
+   "pair": "WSOL-USDT",
+   "venue": "raydium-amm · Solana",
+   "feeApy": "23.7%",
+   "turnover": "0.26x",
+   "tvl": "0.9M"
   },
   {
    "pair": "WETH-USDC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "59.5%",
-   "turnover": "6.12x",
+   "feeApy": "20.1%",
+   "turnover": "2.36x",
    "tvl": "7.7M"
-  },
-  {
-   "pair": "WETH-CBBTC",
-   "venue": "aerodrome-slipstream · Base",
-   "feeApy": "50.8%",
-   "turnover": "7.95x",
-   "tvl": "8.2M"
   }
  ],
  "dex": [
   {
-   "pair": "WETH-AERO",
+   "pair": "AERO-CBBTC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "81.9%",
-   "turnover": "1.09x",
+   "feeApy": "20.7%",
+   "turnover": "0.48x",
    "tvl": "1.3M"
   },
   {
-   "pair": "AERO-CBBTC",
+   "pair": "WETH-AERO",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "43.7%",
-   "turnover": "1.14x",
-   "tvl": "1.1M"
+   "feeApy": "18.6%",
+   "turnover": "0.25x",
+   "tvl": "3.0M"
   },
   {
-   "pair": "1INCH-UNI",
-   "venue": "uniswap-v4 · Ethereum",
-   "feeApy": "36.5%",
-   "turnover": "0.10x",
+   "pair": "WETH-ARB",
+   "venue": "uniswap-v3 · Arbitrum",
+   "feeApy": "10.7%",
+   "turnover": "0.58x",
    "tvl": "1.2M"
   }
  ]
