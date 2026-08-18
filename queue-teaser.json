@@ -1,5 +1,5 @@
 {
- "asOf": "2026-08-17T05:15:01.956Z",
+ "asOf": "2026-08-18T05:15:01.968Z",
  "note": "Current queue priorities (top-3 per basket). Ranked by fee APY + live turnover, not by displayed APY. Not investment advice.",
  "stable": [
   {
@@ -11,63 +11,63 @@
   },
   {
    "pair": "EURC-USDC",
-   "venue": "uniswap-v4 · Ethereum",
-   "feeApy": "27.7%",
-   "turnover": "2.53x",
-   "tvl": "0.9M"
+   "venue": "aerodrome-slipstream · Base",
+   "feeApy": "33.5%",
+   "turnover": "2.52x",
+   "tvl": "2.2M"
   },
   {
-   "pair": "USDC-USDT",
-   "venue": "uniswap-v3 · Polygon",
-   "feeApy": "11.5%",
-   "turnover": "3.14x",
-   "tvl": "0.8M"
+   "pair": "EURC-USDC",
+   "venue": "aerodrome-slipstream · Base",
+   "feeApy": "29.5%",
+   "turnover": "11.53x",
+   "tvl": "0.5M"
   }
  ],
  "coin": [
   {
    "pair": "USDC-CBBTC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "61.7%",
-   "turnover": "0.21x",
-   "tvl": "5.5M"
+   "feeApy": "127.3%",
+   "turnover": "0.43x",
+   "tvl": "5.8M"
   },
   {
    "pair": "WETH-USDC",
-   "venue": "uniswap-v3 · Base",
-   "feeApy": "51.6%",
-   "turnover": "14.13x",
-   "tvl": "0.3M"
+   "venue": "aerodrome-slipstream · Base",
+   "feeApy": "85.8%",
+   "turnover": "5.06x",
+   "tvl": "6.9M"
   },
   {
    "pair": "WETH-CBBTC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "42.8%",
-   "turnover": "9.38x",
-   "tvl": "8.0M"
+   "feeApy": "69.0%",
+   "turnover": "10.80x",
+   "tvl": "8.1M"
   }
  ],
  "dex": [
   {
    "pair": "AERO-CBBTC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "53.7%",
-   "turnover": "1.26x",
+   "feeApy": "63.6%",
+   "turnover": "1.45x",
    "tvl": "1.3M"
+  },
+  {
+   "pair": "AERO-CBBTC",
+   "venue": "aerodrome-slipstream · Base",
+   "feeApy": "49.8%",
+   "turnover": "0.45x",
+   "tvl": "0.7M"
   },
   {
    "pair": "1INCH-CRV",
    "venue": "uniswap-v4 · Ethereum",
-   "feeApy": "34.3%",
-   "turnover": "0.09x",
+   "feeApy": "41.1%",
+   "turnover": "0.11x",
    "tvl": "0.6M"
-  },
-  {
-   "pair": "WETH-AERO",
-   "venue": "aerodrome-slipstream · Base",
-   "feeApy": "27.8%",
-   "turnover": "0.38x",
-   "tvl": "3.5M"
   }
  ]
 }
