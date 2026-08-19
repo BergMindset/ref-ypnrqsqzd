@@ -1,5 +1,5 @@
 {
- "asOf": "2026-08-18T05:15:01.968Z",
+ "asOf": "2026-08-19T05:15:01.389Z",
  "note": "Current queue priorities (top-3 per basket). Ranked by fee APY + live turnover, not by displayed APY. Not investment advice.",
  "stable": [
   {
@@ -12,62 +12,62 @@
   {
    "pair": "EURC-USDC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "33.5%",
-   "turnover": "2.52x",
-   "tvl": "2.2M"
+   "feeApy": "26.7%",
+   "turnover": "1.94x",
+   "tvl": "2.4M"
   },
   {
-   "pair": "EURC-USDC",
-   "venue": "aerodrome-slipstream · Base",
-   "feeApy": "29.5%",
-   "turnover": "11.53x",
-   "tvl": "0.5M"
+   "pair": "USDM-USDT",
+   "venue": "uniswap-v3 · Ethereum",
+   "feeApy": "21.5%",
+   "turnover": "1.18x",
+   "tvl": "11.0M"
   }
  ],
  "coin": [
   {
    "pair": "USDC-CBBTC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "127.3%",
-   "turnover": "0.43x",
+   "feeApy": "101.3%",
+   "turnover": "0.34x",
    "tvl": "5.8M"
   },
   {
    "pair": "WETH-USDC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "85.8%",
-   "turnover": "5.06x",
-   "tvl": "6.9M"
+   "feeApy": "58.5%",
+   "turnover": "4.83x",
+   "tvl": "9.1M"
   },
   {
    "pair": "WETH-CBBTC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "69.0%",
-   "turnover": "10.80x",
-   "tvl": "8.1M"
+   "feeApy": "52.0%",
+   "turnover": "11.40x",
+   "tvl": "8.5M"
   }
  ],
  "dex": [
   {
    "pair": "AERO-CBBTC",
    "venue": "aerodrome-slipstream · Base",
-   "feeApy": "63.6%",
-   "turnover": "1.45x",
-   "tvl": "1.3M"
+   "feeApy": "34.9%",
+   "turnover": "0.85x",
+   "tvl": "1.2M"
   },
   {
-   "pair": "AERO-CBBTC",
-   "venue": "aerodrome-slipstream · Base",
-   "feeApy": "49.8%",
-   "turnover": "0.45x",
-   "tvl": "0.7M"
-  },
-  {
-   "pair": "1INCH-CRV",
+   "pair": "ETH-UNI",
    "venue": "uniswap-v4 · Ethereum",
-   "feeApy": "41.1%",
-   "turnover": "0.11x",
-   "tvl": "0.6M"
+   "feeApy": "30.3%",
+   "turnover": "0.28x",
+   "tvl": "3.4M"
+  },
+  {
+   "pair": "CRV-WETH",
+   "venue": "uniswap-v3 · Arbitrum",
+   "feeApy": "23.8%",
+   "turnover": "0.22x",
+   "tvl": "0.4M"
   }
  ]
 }
