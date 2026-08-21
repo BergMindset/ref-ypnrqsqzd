@@ -1,5 +1,5 @@
 {
- "asOf": "2026-08-20T05:15:01.406Z",
+ "asOf": "2026-08-21T05:15:01.419Z",
  "note": "Current queue priorities (top-3 per basket). Ranked by fee APY + live turnover, not by displayed APY. Not investment advice.",
  "stable": [
   {
@@ -12,15 +12,15 @@
   {
    "pair": "USDC-USDT",
    "venue": "uniswap-v3 · Polygon",
-   "feeApy": "26.7%",
-   "turnover": "7.32x",
-   "tvl": "0.6M"
+   "feeApy": "49.8%",
+   "turnover": "13.64x",
+   "tvl": "0.4M"
   },
   {
    "pair": "USDC-USDT",
    "venue": "uniswap-v3 · Polygon",
-   "feeApy": "25.1%",
-   "turnover": "6.87x",
+   "feeApy": "44.6%",
+   "turnover": "12.22x",
    "tvl": "0.8M"
   }
  ],
@@ -28,46 +28,46 @@
   {
    "pair": "ETH-BTCB",
    "venue": "uniswap-v3 · BSC",
-   "feeApy": "335.3%",
-   "turnover": "3.06x",
-   "tvl": "0.3M"
+   "feeApy": "152.7%",
+   "turnover": "1.39x",
+   "tvl": "0.4M"
   },
   {
    "pair": "WETH-USDC",
    "venue": "uniswap-v3 · Base",
-   "feeApy": "295.1%",
-   "turnover": "0.81x",
-   "tvl": "0.8M"
+   "feeApy": "149.6%",
+   "turnover": "1.37x",
+   "tvl": "112.2M"
   },
   {
    "pair": "WETH-CBBTC",
    "venue": "uniswap-v3 · Base",
-   "feeApy": "132.8%",
-   "turnover": "7.28x",
-   "tvl": "6.3M"
+   "feeApy": "143.3%",
+   "turnover": "7.85x",
+   "tvl": "6.8M"
   }
  ],
  "dex": [
   {
-   "pair": "ETH-UNI",
+   "pair": "ETH-CRV",
    "venue": "uniswap-v4 · Ethereum",
-   "feeApy": "99.6%",
-   "turnover": "0.91x",
-   "tvl": "3.8M"
+   "feeApy": "181.0%",
+   "turnover": "1.65x",
+   "tvl": "0.4M"
   },
   {
-   "pair": "WETH-ARB",
+   "pair": "CRV-WETH",
    "venue": "uniswap-v3 · Arbitrum",
-   "feeApy": "97.6%",
-   "turnover": "5.35x",
-   "tvl": "1.2M"
+   "feeApy": "121.0%",
+   "turnover": "1.11x",
+   "tvl": "0.5M"
   },
   {
-   "pair": "WBTC-ARB",
-   "venue": "uniswap-v3 · Arbitrum",
-   "feeApy": "78.4%",
-   "turnover": "0.72x",
-   "tvl": "1.8M"
+   "pair": "1INCH-CRV",
+   "venue": "uniswap-v4 · Ethereum",
+   "feeApy": "98.6%",
+   "turnover": "0.27x",
+   "tvl": "0.7M"
   }
  ]
 }
