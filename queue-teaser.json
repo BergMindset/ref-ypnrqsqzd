@@ -1,5 +1,5 @@
 {
- "asOf": "2026-08-21T05:15:01.419Z",
+ "asOf": "2026-08-22T05:15:02.181Z",
  "note": "Current queue priorities (top-3 per basket). Ranked by fee APY + live turnover, not by displayed APY. Not investment advice.",
  "stable": [
   {
@@ -10,64 +10,64 @@
    "tvl": "0.6M"
   },
   {
-   "pair": "USDC-USDT",
-   "venue": "uniswap-v3 · Polygon",
-   "feeApy": "49.8%",
-   "turnover": "13.64x",
-   "tvl": "0.4M"
+   "pair": "USDE-USDC",
+   "venue": "uniswap-v3 · Ethereum",
+   "feeApy": "52.1%",
+   "turnover": "14.27x",
+   "tvl": "2.4M"
   },
   {
-   "pair": "USDC-USDT",
-   "venue": "uniswap-v3 · Polygon",
-   "feeApy": "44.6%",
-   "turnover": "12.22x",
-   "tvl": "0.8M"
+   "pair": "USDC-RAIL",
+   "venue": "uniswap-v4 · Ethereum",
+   "feeApy": "46.5%",
+   "turnover": "0.13x",
+   "tvl": "0.5M"
   }
  ],
  "coin": [
   {
-   "pair": "ETH-BTCB",
-   "venue": "uniswap-v3 · BSC",
-   "feeApy": "152.7%",
-   "turnover": "1.39x",
-   "tvl": "0.4M"
+   "pair": "USDC-CBBTC",
+   "venue": "aerodrome-slipstream · Base",
+   "feeApy": "948.1%",
+   "turnover": "3.42x",
+   "tvl": "4.9M"
+  },
+  {
+   "pair": "WETH-USDC",
+   "venue": "aerodrome-slipstream · Base",
+   "feeApy": "247.8%",
+   "turnover": "8.92x",
+   "tvl": "6.2M"
   },
   {
    "pair": "WETH-USDC",
    "venue": "uniswap-v3 · Base",
-   "feeApy": "149.6%",
-   "turnover": "1.37x",
-   "tvl": "112.2M"
-  },
-  {
-   "pair": "WETH-CBBTC",
-   "venue": "uniswap-v3 · Base",
-   "feeApy": "143.3%",
-   "turnover": "7.85x",
-   "tvl": "6.8M"
+   "feeApy": "220.3%",
+   "turnover": "60.34x",
+   "tvl": "0.4M"
   }
  ],
  "dex": [
   {
-   "pair": "ETH-CRV",
-   "venue": "uniswap-v4 · Ethereum",
-   "feeApy": "181.0%",
-   "turnover": "1.65x",
-   "tvl": "0.4M"
+   "pair": "AERO-CBBTC",
+   "venue": "aerodrome-slipstream · Base",
+   "feeApy": "234.8%",
+   "turnover": "2.14x",
+   "tvl": "0.3M"
   },
   {
    "pair": "CRV-WETH",
    "venue": "uniswap-v3 · Arbitrum",
-   "feeApy": "121.0%",
-   "turnover": "1.11x",
+   "feeApy": "153.0%",
+   "turnover": "1.40x",
    "tvl": "0.5M"
   },
   {
-   "pair": "1INCH-CRV",
-   "venue": "uniswap-v4 · Ethereum",
-   "feeApy": "98.6%",
-   "turnover": "0.27x",
-   "tvl": "0.7M"
+   "pair": "AERO-CBBTC",
+   "venue": "aerodrome-slipstream · Base",
+   "feeApy": "148.1%",
+   "turnover": "3.82x",
+   "tvl": "1.4M"
   }
  ]
 }
